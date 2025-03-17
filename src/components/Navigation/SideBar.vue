@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       activeItem: "dashboard",
-      collapsed: false, // New state to handle collapsing
+      collapsed: false,
       menuItems: [
         {
           name: "dashboard",
@@ -41,7 +41,7 @@ export default {
         },
         {
           name: "fleet",
-          label: "Fleet Management",
+          label: "Fleet",
           icon: "far fa-lightbulb",
         },
         {
@@ -135,7 +135,7 @@ export default {
 
 .sidebar ul li {
   padding: 8px;
-  line-height: 23px;
+  height: 23px;
   cursor: pointer;
   border-radius: 5px;
   margin: 7px;
@@ -179,6 +179,12 @@ export default {
 
 .sidebar-title i {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 22px;
+  color: #0b508b;
+}
+
+.sidebar.collapsed ul li,
+.sidebar.collapsed .sidebar-title {
+  justify-content: center;
 }
 </style>
