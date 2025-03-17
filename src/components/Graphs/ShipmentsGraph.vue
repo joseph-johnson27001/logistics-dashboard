@@ -75,7 +75,8 @@ export default defineComponent({
             borderColor: "#ffb400",
             borderWidth: 1,
             type: "bar",
-            borderRadius: 8,
+            borderRadius: 4,
+            barThickness: 20,
           },
         ],
       },
@@ -130,7 +131,6 @@ export default defineComponent({
 <style scoped>
 .graph-container {
   width: 100%;
-
   height: 350px;
   position: relative;
 }
