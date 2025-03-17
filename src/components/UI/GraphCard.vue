@@ -1,11 +1,13 @@
 <template>
   <div class="graph-card">
     <div class="graph-card-header">
-      <h2 class="title">Shipment Statistics</h2>
+      <div class="top-card-container">
+        <h2 class="title">Shipment Statistics</h2>
+        <p class="total-deliveries">
+          Total number of deliveries: {{ totalDeliveries }}
+        </p>
+      </div>
       <div class="info-container">
-        <span class="total-deliveries"
-          >Total number of deliveries: {{ totalDeliveries }}</span
-        >
         <select class="dropdown">
           <option>Option 1</option>
           <option>Option 2</option>
@@ -46,12 +48,19 @@ export default defineComponent({
 .graph-card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .title {
-  color: grey;
+  color: rgba(47, 43, 61, 0.9);
+  font-weight: 400;
   font-size: 18px;
+  margin-bottom: 2px;
+  margin-top: 0px;
+}
+
+.top-card-container {
+  display: block;
 }
 
 .info-container {
@@ -60,8 +69,9 @@ export default defineComponent({
 }
 
 .total-deliveries {
-  color: lightgrey;
-  margin-right: 15px;
+  font-size: 15px;
+  margin-top: 2px;
+  color: rgba(47, 43, 61, 0.55);
 }
 
 .dropdown {

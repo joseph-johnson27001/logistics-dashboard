@@ -65,7 +65,7 @@ export default defineComponent({
             tension: 0.2,
             type: "line",
             borderWidth: 3,
-            pointRadius: 6,
+            pointRadius: 5,
             z: 10,
           },
           {
@@ -97,17 +97,14 @@ export default defineComponent({
             x: {
               grid: {
                 display: false,
-                lineWidth: 0.5,
-                borderColor: "rgba(169, 169, 169, 0.5)",
               },
             },
             y: {
               grid: {
-                display: false,
+                display: true,
                 borderColor: "rgba(169, 169, 169, 0.5)",
                 borderWidth: 0.5,
                 lineWidth: 0.5,
-                dash: [5, 5],
               },
               ticks: {
                 beginAtZero: true,
