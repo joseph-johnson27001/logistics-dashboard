@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <SideBar />
-    <div class="main-content"></div>
+    <div class="main-content">asdasds</div>
   </div>
 </template>
 
@@ -36,7 +36,6 @@ body {
 
 .main-content {
   flex-grow: 1;
-  margin-left: 260px;
   padding: 20px;
   background-color: #f6f5f8;
 }

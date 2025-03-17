@@ -1,7 +1,8 @@
 <template>
-  <div class="sidebar">
+  <div :class="['sidebar', { collapsed }]">
     <div class="sidebar-title">
-      <h1>Logistics</h1>
+      <h1 v-if="!collapsed">Logistics</h1>
+      <i class="fas fa-bars" @click="toggleCollapse"></i>
     </div>
     <ul>
       <li
@@ -13,7 +14,8 @@
         }"
         @click="setActive(item.name)"
       >
-        <i :class="item.icon"></i> {{ item.label }}
+        <i :class="item.icon"></i>
+        <span v-if="!collapsed">{{ item.label }}</span>
       </li>
     </ul>
   </div>
@@ -25,6 +27,7 @@ export default {
   data() {
     return {
       activeItem: "dashboard",
+      collapsed: false, // New state to handle collapsing
       menuItems: [
         {
           name: "dashboard",
@@ -41,7 +44,6 @@ export default {
           label: "Fleet Management",
           icon: "far fa-lightbulb",
         },
-
         {
           name: "inventory",
           label: "Inventory",
@@ -79,8 +81,8 @@ export default {
     setActive(item) {
       this.activeItem = item;
     },
-    logout() {
-      console.log("Logging out...");
+    toggleCollapse() {
+      this.collapsed = !this.collapsed;
     },
   },
 };
@@ -91,19 +93,29 @@ export default {
   width: 260px;
   background-color: rgb(255, 255, 255);
   color: rgba(47, 43, 61, 0.9);
-  height: 100%;
+  min-height: 100%;
   padding-top: 20px;
-  position: fixed;
+  position: relative;
+  z-index: 10;
   font-size: 15px;
   box-shadow: 0 2px 8px rgba(47, 43, 61, 0.12);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: width 0.3s ease;
+  overflow-y: hidden;
+}
+
+.sidebar.collapsed {
+  width: 80px;
 }
 
 .sidebar-title {
   padding: 0px 20px;
   color: rgba(47, 43, 61, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sidebar-title h1 {
@@ -117,6 +129,8 @@ export default {
   list-style: none;
   padding: 0px 5px;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar ul li {
@@ -127,14 +141,6 @@ export default {
   margin: 7px;
   display: flex;
   align-items: center;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0px 5px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .sidebar ul li.logout-item {
@@ -169,5 +175,10 @@ export default {
 
 .sidebar ul li.active i {
   color: white;
+}
+
+.sidebar-title i {
+  cursor: pointer;
+  font-size: 24px;
 }
 </style>
