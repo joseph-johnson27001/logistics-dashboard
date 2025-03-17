@@ -103,7 +103,7 @@ export default {
 }
 
 .sidebar ul li {
-  padding: 15px 8px;
+  padding: 15px 10px;
   cursor: pointer;
   border-radius: 5px;
   margin: 4px 7px;
