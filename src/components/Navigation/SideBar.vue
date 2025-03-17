@@ -29,51 +29,15 @@ export default {
       activeItem: "dashboard",
       collapsed: false,
       menuItems: [
-        {
-          name: "dashboard",
-          label: "Dashboard",
-          icon: "far fa-envelope-open",
-        },
-        {
-          name: "shipments",
-          label: "Shipments",
-          icon: "far fa-calendar",
-        },
-        {
-          name: "fleet",
-          label: "Fleet",
-          icon: "far fa-lightbulb",
-        },
-        {
-          name: "inventory",
-          label: "Inventory",
-          icon: "far fa-file",
-        },
-        {
-          name: "reports",
-          label: "Reports",
-          icon: "far fa-chart-bar",
-        },
-        {
-          name: "analytics",
-          label: "Analytics",
-          icon: "fas fa-chart-line",
-        },
-        {
-          name: "support",
-          label: "Support",
-          icon: "far fa-user-circle",
-        },
-        {
-          name: "settings",
-          label: "Settings",
-          icon: "far fa-save",
-        },
-        {
-          name: "logout",
-          label: "Logout",
-          icon: "fas fa-sign-out-alt",
-        },
+        { name: "dashboard", label: "Dashboard", icon: "far fa-envelope-open" },
+        { name: "shipments", label: "Shipments", icon: "far fa-calendar" },
+        { name: "fleet", label: "Fleet", icon: "far fa-lightbulb" },
+        { name: "inventory", label: "Inventory", icon: "far fa-file" },
+        { name: "reports", label: "Reports", icon: "far fa-chart-bar" },
+        { name: "analytics", label: "Analytics", icon: "fas fa-chart-line" },
+        { name: "support", label: "Support", icon: "far fa-user-circle" },
+        { name: "settings", label: "Settings", icon: "far fa-save" },
+        { name: "logout", label: "Logout", icon: "fas fa-sign-out-alt" },
       ],
     };
   },
@@ -107,13 +71,12 @@ export default {
 }
 
 .sidebar.collapsed {
-  padding-top: 30px;
   width: 80px;
+  padding-top: 30px;
 }
 
 .sidebar-title {
-  padding: 0px 20px;
-  color: rgba(47, 43, 61, 0.9);
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,28 +96,26 @@ export default {
 
 .sidebar ul {
   list-style: none;
-  padding: 0px 5px;
+  padding: 0;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.sidebar.collapsed ul {
-  padding: 0px;
-}
-
 .sidebar ul li {
-  padding: 10px;
+  padding: 15px 8px;
   cursor: pointer;
   border-radius: 5px;
-  margin: 7px;
+  margin: 4px 7px;
   display: flex;
   align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 .sidebar ul li.logout-item {
   margin-top: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  transition: color 0.3s ease;
 }
 
 .sidebar ul li:hover {
