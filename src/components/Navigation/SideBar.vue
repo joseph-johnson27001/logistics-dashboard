@@ -68,7 +68,6 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   transition: width 0.3s ease;
-  overflow-y: hidden;
 }
 
 .sidebar.collapsed {

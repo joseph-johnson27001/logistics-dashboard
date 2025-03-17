@@ -38,6 +38,29 @@
             </template>
           </GraphCard>
         </div>
+        <div class="bottom-container">
+          <!-- Delivery Performance Card -->
+          <StatisticsCard
+            title="Delivery Performance"
+            subtitle="12% increase this month"
+          >
+            <div class="performance-details">
+              <p>Delivery statistics and performance metrics can go here.</p>
+            </div>
+          </StatisticsCard>
+
+          <!-- Orders By Countries Card -->
+          <StatisticsCard
+            title="Orders By Countries"
+            subtitle="62 deliveries in progress"
+          >
+            <div class="orders-by-countries-details">
+              <p>
+                Details about orders being processed in different countries.
+              </p>
+            </div>
+          </StatisticsCard>
+        </div>
       </div>
     </div>
   </div>
@@ -50,6 +73,7 @@ import KpiCard from "./components/UI/KpiCard.vue";
 import GraphCard from "./components/UI/GraphCard.vue";
 import ShipmentsGraph from "./components/Graphs/ShipmentsGraph.vue";
 import OrdersGraph from "./components/Graphs/OrdersGraph.vue";
+import StatisticsCard from "./components/UI/StatisticsCard.vue"; // Import the StatisticsCard
 
 export default {
   name: "App",
@@ -60,6 +84,7 @@ export default {
     GraphCard,
     ShipmentsGraph,
     OrdersGraph,
+    StatisticsCard, // Register the StatisticsCard component
   },
   data() {
     return {
@@ -97,6 +122,8 @@ export default {
           backgroundColorDark: "#10b981",
         },
       ],
+      totalOrders: 230, // Example data for total orders
+      totalDeliveries: 153, // Example data for total deliveries
     };
   },
 };
@@ -118,12 +145,14 @@ body {
 #app {
   display: flex;
   min-height: 100vh;
+  overflow-y: hidden;
 }
 
 .main-content {
   flex-grow: 1;
   padding: 20px;
   background-color: #f6f5f8;
+  overflow-y: scroll;
 }
 
 .content {
@@ -143,8 +172,16 @@ body {
   gap: 20px;
 }
 
+.bottom-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  gap: 20px;
+}
+
 @media (max-width: 1024px) {
-  .second-container {
+  .second-container,
+  .bottom-container {
     grid-template-columns: 1fr;
   }
   .kpi-container {
