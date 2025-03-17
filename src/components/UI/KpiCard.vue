@@ -50,10 +50,6 @@ export default {
   flex: 1;
 }
 
-.kpi-card:hover {
-  transform: translateY(-5px);
-}
-
 .icon-container {
   width: 50px;
   height: 50px;

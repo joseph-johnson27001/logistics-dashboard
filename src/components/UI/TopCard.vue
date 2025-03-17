@@ -8,11 +8,11 @@
 
     <!-- Right Section (Icons & Profile) -->
     <div class="icon-area">
+      <i class="far fa-calendar-check"></i>
+      <i class="far fa-comment-alt"></i>
       <i class="far fa-bell notification-icon">
         <span class="notification-dot"></span>
       </i>
-      <i class="far fa-comment-alt"></i>
-      <i class="far fa-calendar-check"></i>
 
       <!-- Profile Image with Online Indicator -->
       <div class="profile">
@@ -81,7 +81,7 @@ export default {
 .notification-dot {
   width: 8px;
   height: 8px;
-  background: red;
+  background: #ff4c51;
   border-radius: 50%;
   position: absolute;
   top: 0px;
