@@ -7,14 +7,13 @@
       <li
         v-for="(item, index) in menuItems"
         :key="index"
-        :class="{ active: activeItem === item.name }"
+        :class="{
+          active: activeItem === item.name,
+          'logout-item': item.name === 'logout',
+        }"
         @click="setActive(item.name)"
       >
         <i :class="item.icon"></i> {{ item.label }}
-      </li>
-      <!-- The Logout item -->
-      <li @click="logout" class="logout-item">
-        <i class="fas fa-sign-out-alt"></i> Logout
       </li>
     </ul>
   </div>
@@ -35,22 +34,18 @@ export default {
         {
           name: "shipments",
           label: "Shipments",
-          icon: "far fa-envelope-open",
+          icon: "far fa-calendar",
         },
         {
           name: "fleet",
           label: "Fleet Management",
-          icon: "far fa-arrow-alt-circle-right",
+          icon: "far fa-lightbulb",
         },
-        {
-          name: "settings",
-          label: "Settings",
-          icon: "far fa-arrow-alt-circle-right",
-        },
+
         {
           name: "inventory",
           label: "Inventory",
-          icon: "far fa-archive",
+          icon: "far fa-file",
         },
         {
           name: "reports",
@@ -60,12 +55,22 @@ export default {
         {
           name: "analytics",
           label: "Analytics",
-          icon: "far fa-chart-line",
+          icon: "fas fa-chart-line",
         },
         {
           name: "support",
           label: "Support",
-          icon: "far fa-question-circle",
+          icon: "far fa-user-circle",
+        },
+        {
+          name: "settings",
+          label: "Settings",
+          icon: "far fa-save",
+        },
+        {
+          name: "logout",
+          label: "Logout",
+          icon: "fas fa-sign-out-alt",
         },
       ],
     };
@@ -84,7 +89,7 @@ export default {
 <style scoped>
 .sidebar {
   width: 260px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   color: rgba(47, 43, 61, 0.9);
   height: 100%;
   padding-top: 20px;
@@ -124,8 +129,25 @@ export default {
   align-items: center;
 }
 
+.sidebar ul {
+  list-style: none;
+  padding: 0px 5px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul li.logout-item {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
 .sidebar ul li:hover {
   background-color: #f0f0f1;
+}
+
+.sidebar ul li.logout-item:hover i {
+  color: #ff4d4f;
 }
 
 .sidebar ul li.active {
@@ -139,33 +161,13 @@ export default {
 }
 
 .sidebar ul li i {
-  margin-right: 8px;
-  margin-left: 8px;
+  margin-right: 10px;
+  margin-left: 5px;
   color: rgba(47, 43, 61, 0.9);
+  font-size: 16px;
 }
 
 .sidebar ul li.active i {
   color: white;
-}
-
-.logout-item {
-  padding: 8px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  color: rgba(47, 43, 61, 0.9);
-  margin-top: auto;
-}
-
-.logout-item:hover {
-  background-color: #f0f0f1;
-}
-
-.logout-item i {
-  margin-right: 8px;
-}
-
-.logout-item:hover i {
-  color: #ff4d4f;
 }
 </style>
