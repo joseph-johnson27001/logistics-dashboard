@@ -9,19 +9,17 @@
       </div>
       <div class="info-container">
         <select class="dropdown">
-          <option>Option 1</option>
-          <option>Option 2</option>
+          <option>January</option>
         </select>
       </div>
     </div>
-    <!-- Importing the ShipmentsGraph component here -->
     <ShipmentsGraph />
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import ShipmentsGraph from "../Graphs/ShipmentsGraph.vue"; // Corrected import
+import ShipmentsGraph from "../Graphs/ShipmentsGraph.vue";
 
 export default defineComponent({
   name: "GraphCard",
@@ -40,7 +38,7 @@ export default defineComponent({
 .graph-card {
   background: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -54,7 +52,7 @@ export default defineComponent({
 .title {
   color: rgba(47, 43, 61, 0.9);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 2px;
   margin-top: 0px;
 }
@@ -69,17 +67,24 @@ export default defineComponent({
 }
 
 .total-deliveries {
-  font-size: 15px;
   margin-top: 2px;
+  font-size: 13px;
   color: rgba(47, 43, 61, 0.55);
 }
 
 .dropdown {
-  padding: 5px 10px;
-  background-color: #9e6cfd;
-  color: #fff;
-  border: 1px solid #fff;
+  padding: 10px 15px;
+  font-weight: 600;
+  font-family: "Inter";
+  background-color: #e8e6fc;
+  color: #8b81f3;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown:hover {
+  background-color: #c0bbf7;
 }
 </style>

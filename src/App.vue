@@ -21,7 +21,6 @@
           <div></div>
           <GraphCard />
         </div>
-        <!-- GraphCard Component -->
       </div>
     </div>
   </div>
@@ -31,14 +30,14 @@
 import SideBar from "./components/Navigation/SideBar.vue";
 import TopCard from "./components/UI/TopCard.vue";
 import KpiCard from "./components/UI/KpiCard.vue";
-import GraphCard from "./components/UI/GraphCard.vue"; // Corrected import
+import GraphCard from "./components/UI/GraphCard.vue";
 export default {
   name: "App",
   components: {
     SideBar,
     TopCard,
     KpiCard,
-    GraphCard, // Corrected component name
+    GraphCard,
   },
   data() {
     return {
@@ -119,6 +118,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 20px;
+  gap: 20px;
 }
 
 @media (max-width: 1024px) {

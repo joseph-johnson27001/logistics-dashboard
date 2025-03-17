@@ -76,8 +76,8 @@ export default {
 }
 
 .kpi-title {
-  color: grey;
-  font-size: 14px;
+  color: rgba(47, 43, 61, 0.7);
+  font-size: 13px;
 }
 
 .kpi-change {
@@ -94,8 +94,8 @@ export default {
 }
 
 .kpi-subtext {
-  color: lightgrey;
   font-size: 12px;
+  color: rgba(47, 43, 61, 0.55);
   margin-left: 5px;
 }
 </style>
