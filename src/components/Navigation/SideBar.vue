@@ -127,8 +127,8 @@ export default {
 }
 
 .sidebar ul li i {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 8px;
+  margin-left: 5px;
   color: rgba(47, 43, 61, 0.9);
 }
 

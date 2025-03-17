@@ -1,11 +1,7 @@
 <template>
   <div id="app">
     <SideBar />
-    <div class="main-content">
-      <h1>Dashboard</h1>
-      <p>Welcome to the logistics dashboard. Here you can view key metrics.</p>
-      <!-- Placeholder for charts and KPI widgets -->
-    </div>
+    <div class="main-content"></div>
   </div>
 </template>
 
