@@ -17,6 +17,11 @@
             :style="{ borderBottomColor: kpi.backgroundColorDark }"
           />
         </div>
+        <div class="second-container">
+          <div></div>
+          <GraphCard />
+        </div>
+        <!-- GraphCard Component -->
       </div>
     </div>
   </div>
@@ -26,13 +31,14 @@
 import SideBar from "./components/Navigation/SideBar.vue";
 import TopCard from "./components/UI/TopCard.vue";
 import KpiCard from "./components/UI/KpiCard.vue";
-
+import GraphCard from "./components/UI/GraphCard.vue"; // Corrected import
 export default {
   name: "App",
   components: {
     SideBar,
     TopCard,
     KpiCard,
+    GraphCard, // Corrected component name
   },
   data() {
     return {
@@ -109,7 +115,16 @@ body {
   gap: 20px;
 }
 
+.second-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+}
+
 @media (max-width: 1024px) {
+  .second-container {
+    grid-template-columns: 1fr;
+  }
   .kpi-container {
     grid-template-columns: repeat(2, 1fr);
   }
