@@ -18,12 +18,21 @@
           />
         </div>
         <div class="second-container">
-          <GraphCard :graphTitle="'Orders Statistics'">
+          <GraphCard
+            :graphTitle="'Orders Statistics'"
+            :total="totalOrders"
+            totalType="Orders"
+          >
             <template #graph>
               <OrdersGraph />
             </template>
           </GraphCard>
-          <GraphCard :graphTitle="'Shipment Statistics'">
+
+          <GraphCard
+            :graphTitle="'Shipment Statistics'"
+            :total="totalDeliveries"
+            totalType="Deliveries"
+          >
             <template #graph>
               <ShipmentsGraph />
             </template>

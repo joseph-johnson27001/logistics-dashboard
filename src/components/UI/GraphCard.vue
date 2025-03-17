@@ -1,12 +1,10 @@
-<!-- GraphCard.vue -->
-
 <template>
   <div class="graph-card">
     <div class="graph-card-header">
       <div class="top-card-container">
         <h2 class="title">{{ graphTitle }}</h2>
         <p class="total-deliveries">
-          Total number of deliveries: {{ totalDeliveries }}
+          Total Number Of {{ totalType }}: {{ total }}
         </p>
       </div>
       <div class="info-container">
@@ -29,11 +27,14 @@ export default defineComponent({
       type: String,
       required: true,
     },
-  },
-  data() {
-    return {
-      totalDeliveries: 153,
-    };
+    total: {
+      type: Number,
+      required: true,
+    },
+    totalType: {
+      type: String,
+      required: true,
+    },
   },
 });
 </script>
