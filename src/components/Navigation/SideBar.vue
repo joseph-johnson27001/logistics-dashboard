@@ -125,6 +125,11 @@ export default {
   color: #0b508b;
 }
 
+.sidebar-title i {
+  cursor: pointer;
+  font-size: 22px;
+}
+
 .sidebar ul {
   list-style: none;
   padding: 0px 5px;
@@ -134,8 +139,7 @@ export default {
 }
 
 .sidebar ul li {
-  padding: 8px;
-  height: 23px;
+  padding: 10px;
   cursor: pointer;
   border-radius: 5px;
   margin: 7px;
@@ -177,14 +181,13 @@ export default {
   color: white;
 }
 
-.sidebar-title i {
-  cursor: pointer;
-  font-size: 22px;
-  color: #0b508b;
-}
-
 .sidebar.collapsed ul li,
 .sidebar.collapsed .sidebar-title {
   justify-content: center;
+}
+
+.sidebar.collapsed ul li i {
+  margin: 0;
+  padding: 10px;
 }
 </style>
