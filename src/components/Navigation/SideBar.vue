@@ -1,5 +1,8 @@
 <template>
   <div class="sidebar">
+    <div class="sidebar-title">
+      <h1>Logistics</h1>
+    </div>
     <ul>
       <li
         v-for="(item, index) in menuItems"
@@ -40,6 +43,26 @@ export default {
           label: "Settings",
           icon: "far fa-arrow-alt-circle-right",
         },
+        {
+          name: "inventory",
+          label: "Inventory",
+          icon: "far fa-archive",
+        },
+        {
+          name: "reports",
+          label: "Reports",
+          icon: "far fa-chart-bar",
+        },
+        {
+          name: "analytics",
+          label: "Analytics",
+          icon: "far fa-chart-line",
+        },
+        {
+          name: "support",
+          label: "Support",
+          icon: "far fa-question-circle",
+        },
       ],
     };
   },
@@ -63,10 +86,20 @@ export default {
   box-shadow: 0 2px 8px rgba(47, 43, 61, 0.12);
 }
 
+.sidebar-title {
+  padding: 0px 20px;
+  color: rgba(47, 43, 61, 0.9);
+}
+
+.sidebar-title h1 {
+  font-family: "Unica One", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
 .sidebar ul {
   list-style: none;
-  padding: 5px;
-  margin-top: 20px;
+  padding: 0px 5px;
 }
 
 .sidebar ul li {
@@ -74,7 +107,7 @@ export default {
   line-height: 23px;
   cursor: pointer;
   border-radius: 5px;
-  margin: 8px;
+  margin: 10px;
   display: flex;
   align-items: center;
 }
