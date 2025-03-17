@@ -112,4 +112,13 @@ export default {
   right: 0px;
   border: 2px solid white;
 }
+
+@media (max-width: 500px) {
+  input {
+    display: none;
+  }
+  .fa-search {
+    cursor: pointer;
+  }
+}
 </style>

@@ -1,8 +1,10 @@
+<!-- GraphCard.vue -->
+
 <template>
   <div class="graph-card">
     <div class="graph-card-header">
       <div class="top-card-container">
-        <h2 class="title">Shipment Statistics</h2>
+        <h2 class="title">{{ graphTitle }}</h2>
         <p class="total-deliveries">
           Total number of deliveries: {{ totalDeliveries }}
         </p>
@@ -13,18 +15,20 @@
         </select>
       </div>
     </div>
-    <ShipmentsGraph />
+    <slot name="graph"></slot>
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import ShipmentsGraph from "../Graphs/ShipmentsGraph.vue";
 
 export default defineComponent({
   name: "GraphCard",
-  components: {
-    ShipmentsGraph,
+  props: {
+    graphTitle: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {

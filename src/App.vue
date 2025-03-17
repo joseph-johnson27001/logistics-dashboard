@@ -18,8 +18,16 @@
           />
         </div>
         <div class="second-container">
-          <div></div>
-          <GraphCard />
+          <GraphCard :graphTitle="'Orders Statistics'">
+            <template #graph>
+              <OrdersGraph />
+            </template>
+          </GraphCard>
+          <GraphCard :graphTitle="'Shipment Statistics'">
+            <template #graph>
+              <ShipmentsGraph />
+            </template>
+          </GraphCard>
         </div>
       </div>
     </div>
@@ -31,6 +39,9 @@ import SideBar from "./components/Navigation/SideBar.vue";
 import TopCard from "./components/UI/TopCard.vue";
 import KpiCard from "./components/UI/KpiCard.vue";
 import GraphCard from "./components/UI/GraphCard.vue";
+import ShipmentsGraph from "./components/Graphs/ShipmentsGraph.vue";
+import OrdersGraph from "./components/Graphs/OrdersGraph.vue";
+
 export default {
   name: "App",
   components: {
@@ -38,6 +49,8 @@ export default {
     TopCard,
     KpiCard,
     GraphCard,
+    ShipmentsGraph,
+    OrdersGraph,
   },
   data() {
     return {

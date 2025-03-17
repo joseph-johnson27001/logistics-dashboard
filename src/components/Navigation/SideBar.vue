@@ -158,4 +158,10 @@ export default {
   padding: 10px;
   font-size: 18px;
 }
+
+@media (max-width: 699px) {
+  .sidebar {
+    display: none;
+  }
+}
 </style>

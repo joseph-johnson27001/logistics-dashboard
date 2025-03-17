@@ -36,7 +36,7 @@ Chart.register(
 Chart.defaults.font.family = '"Inter", sans-serif';
 
 export default defineComponent({
-  name: "ShipmentsGraph",
+  name: "OrdersGraph",
   data() {
     return {
       chartData: {
@@ -56,23 +56,23 @@ export default defineComponent({
         ],
         datasets: [
           {
-            label: "Deliveries",
-            data: [28, 48, 40, 19, 86, 27, 90, 69, 68, 45, 50, 65],
-            borderColor: "#9e6cfd",
-            backgroundColor: "rgba(0, 0, 0, 0)",
+            label: "Orders",
+            data: [30, 45, 38, 50, 80, 55, 70, 60, 75, 85, 90, 100],
+            borderColor: "#FF8C00", // Dark orange border color
+            backgroundColor: "rgba(255, 140, 0, 0.2)", // Light orange background fill
             pointBackgroundColor: "white",
-            fill: false,
-            tension: 0.2,
+            fill: true,
+            tension: 0.4,
             type: "line",
             borderWidth: 3,
             pointRadius: 5,
             z: 10,
           },
           {
-            label: "Shipments",
-            data: [65, 59, 80, 81, 56, 55, 40, 65, 78, 65, 50, 55],
-            backgroundColor: "#ffb400",
-            borderColor: "#ffb400",
+            label: "New Orders",
+            data: [50, 40, 60, 90, 70, 65, 80, 95, 75, 85, 90, 110],
+            backgroundColor: "#42A5F5", // Light blue for bars
+            borderColor: "#1E88E5", // Darker blue border color
             borderWidth: 1,
             type: "bar",
             borderRadius: 4,
@@ -114,7 +114,6 @@ export default defineComponent({
               },
             },
           },
-
           plugins: {
             legend: {
               labels: {
