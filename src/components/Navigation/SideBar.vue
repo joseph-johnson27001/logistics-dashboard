@@ -107,6 +107,7 @@ export default {
 }
 
 .sidebar.collapsed {
+  padding-top: 30px;
   width: 80px;
 }
 
@@ -136,6 +137,10 @@ export default {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+}
+
+.sidebar.collapsed ul {
+  padding: 0px;
 }
 
 .sidebar ul li {
