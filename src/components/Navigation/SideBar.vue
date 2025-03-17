@@ -62,7 +62,8 @@ export default {
   position: relative;
   z-index: 10;
   font-size: 15px;
-  box-shadow: 0 2px 8px rgba(47, 43, 61, 0.12);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -132,7 +133,7 @@ export default {
     rgba(115, 103, 240, 0.7),
     rgb(115, 103, 240)
   );
-  box-shadow: 0 2px 6px rgba(115, 103, 240, 0.3);
+
   color: white;
 }
 
@@ -155,5 +156,6 @@ export default {
 .sidebar.collapsed ul li i {
   margin: 0;
   padding: 10px;
+  font-size: 18px;
 }
 </style>

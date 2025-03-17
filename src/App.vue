@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <SideBar />
-    <div class="main-content">asdasds</div>
+    <div class="main-content">
+      <TopCard />
+      <div class="content"></div>
+    </div>
   </div>
 </template>
 
 <script>
 import SideBar from "./components/Navigation/SideBar.vue";
+import TopCard from "./components/UI/TopCard.vue";
 
 export default {
   name: "App",
   components: {
     SideBar,
+    TopCard,
   },
 };
 </script>
@@ -38,5 +43,9 @@ body {
   flex-grow: 1;
   padding: 20px;
   background-color: #f6f5f8;
+}
+
+.content {
+  margin-top: 20px;
 }
 </style>
