@@ -3,16 +3,12 @@
     <div v-if="isVisible" class="mobile-nav">
       <div class="close-btn" @click="closeMenu">&times;</div>
       <ul>
-        <li><i class="fas fa-home"></i> Home</li>
-        <li><i class="fas fa-tachometer-alt"></i> Dashboard</li>
-        <li><i class="fas fa-shipping-fast"></i> Shipments</li>
-        <li><i class="fas fa-truck"></i> Fleet</li>
-        <li><i class="fas fa-cogs"></i> Inventory</li>
-        <li><i class="fas fa-chart-line"></i> Reports</li>
-        <li><i class="fas fa-chart-pie"></i> Analytics</li>
-        <li><i class="fas fa-life-ring"></i> Support</li>
-        <li><i class="fas fa-cogs"></i> Settings</li>
-        <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+        <li v-for="(item, index) in navItems" :key="index" @click="closeMenu">
+          <div class="icon-container">
+            <i :class="item.icon"></i>
+          </div>
+          {{ item.name }}
+        </li>
       </ul>
     </div>
   </transition>
@@ -25,6 +21,18 @@ export default {
     return {
       windowWidth: window.innerWidth,
       isVisible: false,
+      navItems: [
+        { name: "Home", icon: "fas fa-home" },
+        { name: "Dashboard", icon: "fas fa-tachometer-alt" },
+        { name: "Shipments", icon: "fas fa-shipping-fast" },
+        { name: "Fleet", icon: "fas fa-truck" },
+        { name: "Inventory", icon: "fas fa-cogs" },
+        { name: "Reports", icon: "fas fa-chart-line" },
+        { name: "Analytics", icon: "fas fa-chart-pie" },
+        { name: "Support", icon: "fas fa-life-ring" },
+        { name: "Settings", icon: "fas fa-cogs" },
+        { name: "Logout", icon: "fas fa-sign-out-alt" },
+      ],
     };
   },
   mounted() {
@@ -101,6 +109,14 @@ li:hover {
 
 .fas {
   font-size: 1.5rem;
+}
+
+.icon-container {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-fade-enter,
