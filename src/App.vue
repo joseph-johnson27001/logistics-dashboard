@@ -52,14 +52,14 @@
 
           <StatisticsCard
             title="Delivery Performance"
-            subtitle="12% increase in this month"
+            subtitle="12% Increase This month"
           >
           </StatisticsCard>
 
           <!-- Orders By Countries Card -->
           <StatisticsCard
             title="Orders By Countries"
-            subtitle="62 deliveries in progress"
+            subtitle="62 Deliveries In Progress"
           >
             <div class="orders-by-countries-details">
               <OrdersByCountry />
