@@ -38,6 +38,18 @@
             </template>
           </GraphCard>
         </div>
+        <!-- Vehichle Overview Card -->
+        <div class="middle-container">
+          <StatisticsCard
+            title="Vehichle Overview"
+            subtitle="232 Currently Active Vehichles"
+          >
+            <div class="vehichles-details">
+              <VehichleOverviewTable />
+            </div>
+          </StatisticsCard>
+        </div>
+
         <div class="bottom-container">
           <!-- Delivery Performance Card -->
           <StatisticsCard
@@ -47,16 +59,6 @@
             <div class="performance-details">
               <!-- <DeliveryPerformanceTable /> -->
             </div>
-          </StatisticsCard>
-          <!-- Vehichle Overview Card -->
-          <StatisticsCard
-            title="Vehichle Overview"
-            subtitle="232 Currently Active Vehichles"
-          >
-            <div class="vehichles-details">
-              <VehichleOverviewTable />
-            </div>
-            <!-- PUT IT HERE -->
           </StatisticsCard>
 
           <!-- Orders By Countries Card -->
@@ -182,6 +184,10 @@ body {
   grid-template-columns: 1fr 1fr;
   margin-top: 20px;
   gap: 20px;
+}
+
+.middle-container {
+  margin-top: 20px;
 }
 
 .bottom-container {
