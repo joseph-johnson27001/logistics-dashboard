@@ -203,7 +203,7 @@ body {
 
 @media (max-width: 1400px) {
   .bottom-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -213,6 +213,9 @@ body {
   }
   .kpi-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .bottom-container {
+    grid-template-columns: 1fr;
   }
 }
 
