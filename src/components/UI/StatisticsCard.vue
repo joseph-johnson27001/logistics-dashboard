@@ -42,13 +42,16 @@ export default defineComponent({
 }
 
 .title {
-  font-size: 18px;
-  font-weight: 600;
   color: rgba(47, 43, 61, 0.9);
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 2px;
+  margin-top: 0px;
 }
 
 .subtitle {
-  font-size: 14px;
+  margin-top: 2px;
+  font-size: 13px;
   color: rgba(47, 43, 61, 0.55);
 }
 
