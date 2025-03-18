@@ -70,7 +70,11 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+.country-row:hover {
+  background-color: #f5f5f5;
 }
 
 .country-details {
@@ -108,18 +112,18 @@ export default {
 }
 
 .change-value {
-  font-size: 16px; /* Same font size as the table */
-  font-weight: 500; /* Same font weight as the table */
+  font-size: 16px;
+  font-weight: 500;
   display: flex;
   align-items: center;
 }
 
 .change-value.increase {
-  color: #10b981; /* Green for increase */
+  color: #10b981;
 }
 
 .change-value.decrease {
-  color: #ef4444; /* Red for decrease */
+  color: #ef4444;
 }
 
 .chevron {

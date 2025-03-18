@@ -74,7 +74,7 @@ td.icon-text {
   color: rgba(47, 43, 61, 0.9);
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .icon-container {
@@ -92,12 +92,17 @@ td.time {
 td.time,
 td.percentage {
   text-align: right;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 tr {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
+  cursor: pointer;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
 }
 
 tr .percentage {

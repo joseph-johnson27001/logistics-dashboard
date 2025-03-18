@@ -50,6 +50,12 @@
             </div>
           </StatisticsCard>
 
+          <StatisticsCard
+            title="Delivery Performance"
+            subtitle="12% increase in this month"
+          >
+          </StatisticsCard>
+
           <!-- Orders By Countries Card -->
           <StatisticsCard
             title="Orders By Countries"
@@ -179,7 +185,7 @@ body {
 
 .bottom-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 20px;
   gap: 20px;
 }
@@ -192,9 +198,14 @@ body {
   width: 100%;
 }
 
-@media (max-width: 1024px) {
-  .second-container,
+@media (max-width: 1400px) {
   .bottom-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .second-container {
     grid-template-columns: 1fr;
   }
   .kpi-container {
