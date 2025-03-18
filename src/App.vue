@@ -2,8 +2,8 @@
   <div id="app">
     <SideBar />
     <div class="main-content">
-      <TopCard />
       <div class="content">
+        <TopCard />
         <div class="kpi-container">
           <KpiCard
             v-for="(kpi, index) in kpis"
@@ -153,20 +153,21 @@ body {
 
 .main-content {
   flex-grow: 1;
-  padding: 20px;
   background-color: #f6f5f8;
 }
 
 .content {
-  margin-top: 20px;
+  padding: 20px;
   height: 100dvh;
   overflow-y: scroll;
+  box-sizing: border-box;
 }
 
 .kpi-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  margin-top: 20px;
 }
 
 .second-container {
