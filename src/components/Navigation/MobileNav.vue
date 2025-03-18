@@ -3,16 +3,16 @@
     <div v-if="isVisible" class="mobile-nav">
       <div class="close-btn" @click="closeMenu">&times;</div>
       <ul>
-        <li @click="navigateTo('/')">Home</li>
-        <li @click="navigateTo('/dashboard')">Dashboard</li>
-        <li @click="navigateTo('/shipments')">Shipments</li>
-        <li @click="navigateTo('/fleet')">Fleet</li>
-        <li @click="navigateTo('/inventory')">Inventory</li>
-        <li @click="navigateTo('/reports')">Reports</li>
-        <li @click="navigateTo('/analytics')">Analytics</li>
-        <li @click="navigateTo('/support')">Support</li>
-        <li @click="navigateTo('/settings')">Settings</li>
-        <li @click="navigateTo('/logout')">Logout</li>
+        <li @click="navigateTo()">Home</li>
+        <li @click="navigateTo()">Dashboard</li>
+        <li @click="navigateTo()">Shipments</li>
+        <li @click="navigateTo()">Fleet</li>
+        <li @click="navigateTo()">Inventory</li>
+        <li @click="navigateTo()">Reports</li>
+        <li @click="navigateTo()">Analytics</li>
+        <li @click="navigateTo()">Support</li>
+        <li @click="navigateTo()">Settings</li>
+        <li @click="navigateTo()">Logout</li>
       </ul>
     </div>
   </transition>
@@ -46,8 +46,7 @@ export default {
     closeMenu() {
       this.isVisible = false;
     },
-    navigateTo(route) {
-      this.$router.push(route);
+    navigateTo() {
       this.closeMenu();
     },
   },

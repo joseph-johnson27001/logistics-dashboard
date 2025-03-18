@@ -2,11 +2,9 @@
   <div id="app">
     <SideBar />
     <MobileNav v-if="isMobileNavVisible" />
-    <!-- MobileNav is conditionally rendered based on the state -->
     <div class="main-content">
       <div class="content">
         <TopCard @toggle-mobile-nav="toggleMobileNav" />
-        <!-- Listening for the toggle event from TopCard -->
         <div class="kpi-container">
           <KpiCard
             v-for="(kpi, index) in kpis"
