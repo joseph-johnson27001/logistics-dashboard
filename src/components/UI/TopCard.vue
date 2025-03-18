@@ -3,7 +3,7 @@
     <!-- Left Section (Search) -->
     <div class="search-area">
       <i class="fas fa-search"></i>
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars" @click="openMobileNav"></i>
       <input type="text" placeholder="Search..." />
     </div>
 
@@ -27,6 +27,11 @@
 <script>
 export default {
   name: "TopCard",
+  methods: {
+    openMobileNav() {
+      this.$emit("toggle-mobile-nav");
+    },
+  },
 };
 </script>
 

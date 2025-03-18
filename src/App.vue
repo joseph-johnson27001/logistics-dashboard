@@ -1,9 +1,12 @@
 <template>
   <div id="app">
     <SideBar />
+    <MobileNav v-if="isMobileNavVisible" />
+    <!-- MobileNav is conditionally rendered based on the state -->
     <div class="main-content">
       <div class="content">
-        <TopCard />
+        <TopCard @toggle-mobile-nav="toggleMobileNav" />
+        <!-- Listening for the toggle event from TopCard -->
         <div class="kpi-container">
           <KpiCard
             v-for="(kpi, index) in kpis"
@@ -40,7 +43,7 @@
         </div>
 
         <div class="bottom-container">
-          <!-- Vehichle Overview Card -->
+          <!-- Vehicle Overview Card -->
           <StatisticsCard
             title="Vehichle Overview"
             subtitle="232 Currently Active Vehichles"
@@ -76,6 +79,7 @@
 
 <script>
 import SideBar from "./components/Navigation/SideBar.vue";
+import MobileNav from "./components/Navigation/MobileNav.vue";
 import TopCard from "./components/UI/TopCard.vue";
 import KpiCard from "./components/UI/KpiCard.vue";
 import GraphCard from "./components/UI/GraphCard.vue";
@@ -99,9 +103,11 @@ export default {
     VehichleOverviewTable,
     OrdersByCountry,
     DeliveryPerformance,
+    MobileNav, // Register the MobileNav component
   },
   data() {
     return {
+      isMobileNavVisible: false, // State to control the visibility of the mobile nav
       kpis: [
         {
           title: "On Route Vehicles",
@@ -139,6 +145,12 @@ export default {
       totalOrders: 230,
       totalDeliveries: 153,
     };
+  },
+  methods: {
+    toggleMobileNav() {
+      // Toggles the visibility of the MobileNav component
+      this.isMobileNavVisible = !this.isMobileNavVisible;
+    },
   },
 };
 </script>
