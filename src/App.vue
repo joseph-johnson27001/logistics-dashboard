@@ -212,7 +212,8 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .bottom-container {
+  .bottom-container,
+  .second-container {
     grid-template-columns: 1fr;
   }
 
