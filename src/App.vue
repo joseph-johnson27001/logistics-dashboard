@@ -52,8 +52,11 @@
 
           <StatisticsCard
             title="Delivery Performance"
-            subtitle="12% Increase This month"
+            subtitle="12% Increase This Month"
           >
+            <div class="delivery-details">
+              <DeliveryPerformance />
+            </div>
           </StatisticsCard>
 
           <!-- Orders By Countries Card -->
@@ -81,6 +84,7 @@ import OrdersGraph from "./components/Graphs/OrdersGraph.vue";
 import StatisticsCard from "./components/UI/StatisticsCard.vue";
 import VehichleOverviewTable from "./components/Tables/VehichlesOverview.vue";
 import OrdersByCountry from "./components/Tables/OrdersByCountry.vue";
+import DeliveryPerformance from "./components/Tables/DeliveryPerformance.vue";
 
 export default {
   name: "App",
@@ -94,6 +98,7 @@ export default {
     StatisticsCard,
     VehichleOverviewTable,
     OrdersByCountry,
+    DeliveryPerformance,
   },
   data() {
     return {
@@ -190,10 +195,8 @@ body {
   gap: 20px;
 }
 
-.vehichles-details {
-  width: 100%;
-}
-
+.vehichles-details,
+.delivery-details,
 .orders-by-countries-details {
   width: 100%;
 }
