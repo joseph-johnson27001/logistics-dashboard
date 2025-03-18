@@ -58,6 +58,7 @@ export default {
   background-color: rgb(255, 255, 255);
   color: rgba(47, 43, 61, 0.9);
   min-height: 100%;
+  max-height: 100vh;
   padding-top: 20px;
   position: relative;
   z-index: 10;
@@ -114,7 +115,7 @@ export default {
 
 .sidebar ul li.logout-item {
   margin-top: auto;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   transition: color 0.3s ease;
 }
 

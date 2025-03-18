@@ -137,6 +137,7 @@ body {
   margin: 0px !important;
   scrollbar-width: none;
   font-family: "Inter", sans-serif;
+  overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -148,18 +149,18 @@ body {
 #app {
   display: flex;
   min-height: 100vh;
-  overflow-y: hidden;
 }
 
 .main-content {
   flex-grow: 1;
   padding: 20px;
   background-color: #f6f5f8;
-  overflow-y: scroll;
 }
 
 .content {
   margin-top: 20px;
+  height: 100dvh;
+  overflow-y: scroll;
 }
 
 .kpi-container {
