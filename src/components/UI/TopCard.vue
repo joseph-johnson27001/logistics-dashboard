@@ -125,7 +125,7 @@ export default {
   font-size: 18px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 699px) {
   input {
     display: none;
   }
