@@ -7,7 +7,9 @@
         :class="{ 'no-border-bottom': index === rows.length - 1 }"
       >
         <td class="icon-text">
-          <i :class="row.icon" :style="{ color: row.color }"></i>
+          <div class="icon-container">
+            <i :class="row.icon" :style="{ color: row.color }"></i>
+          </div>
           {{ row.label }}
         </td>
         <td class="time">{{ row.time }}</td>
@@ -59,6 +61,8 @@ export default {
 
 <style scoped>
 .vehichle-overview-table {
+  font-family: "Assistant";
+  font-weight: 400;
   width: 100%;
 }
 
@@ -76,6 +80,14 @@ td.icon-text {
   align-items: center;
   gap: 10px;
   font-size: 16px;
+  font-weight: 500;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
 }
 
 td.time,
