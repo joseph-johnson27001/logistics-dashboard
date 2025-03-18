@@ -97,6 +97,7 @@ td.percentage {
 
 tr {
   font-size: 16px;
+  line-height: 1.5;
 }
 
 tr .percentage {
