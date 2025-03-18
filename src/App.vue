@@ -205,23 +205,29 @@ body {
   .bottom-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  .bottom-container .statistics-card:first-child {
+    grid-column: span 2;
+  }
 }
 
 @media (max-width: 1024px) {
-  .second-container {
-    grid-template-columns: 1fr;
-  }
-  .kpi-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .bottom-container {
     grid-template-columns: 1fr;
+  }
+
+  .bottom-container .statistics-card:first-child {
+    grid-column: span 1;
   }
 }
 
 @media (max-width: 600px) {
   .kpi-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bottom-container .statistics-card {
+    grid-column: span 1;
   }
 }
 </style>
