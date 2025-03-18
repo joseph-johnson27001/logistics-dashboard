@@ -16,17 +16,8 @@
             { increase: country.change >= 0, decrease: country.change < 0 },
           ]"
         >
-          <span
-            class="chevron"
-            :class="{ up: country.change >= 0, down: country.change < 0 }"
-          >
-            <i
-              class="fas"
-              :class="{
-                'fa-chevron-up': country.change >= 0,
-                'fa-chevron-down': country.change < 0,
-              }"
-            ></i>
+          <span class="chevron" :class="chevronClass(country.change)">
+            <i :class="chevronIconClass(country.change)"></i>
           </span>
           {{ country.change }}%
         </div>
@@ -61,6 +52,18 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    chevronClass() {
+      return (change) => {
+        return change >= 0 ? "up" : "down";
+      };
+    },
+    chevronIconClass() {
+      return (change) => {
+        return change >= 0 ? "fas fa-chevron-up" : "fas fa-chevron-down";
+      };
+    },
   },
 };
 </script>
@@ -112,8 +115,7 @@ export default {
 }
 
 .change-value {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
   display: flex;
   align-items: center;
 }

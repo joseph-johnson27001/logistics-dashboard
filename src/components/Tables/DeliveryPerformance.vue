@@ -97,8 +97,8 @@ export default {
 }
 
 .stat-title {
-  font-weight: bold;
   font-size: 16px;
+  font-weight: 500;
   color: #333;
 }
 
@@ -116,8 +116,9 @@ export default {
 }
 
 .stat-value {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: rgba(47, 43, 61, 0.7);
 }
 </style>
