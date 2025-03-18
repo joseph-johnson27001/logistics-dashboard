@@ -69,6 +69,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   transition: width 0.3s ease;
+  overflow-y: scroll;
 }
 
 .sidebar.collapsed {
@@ -115,7 +116,7 @@ export default {
 
 .sidebar ul li.logout-item {
   margin-top: auto;
-  margin-bottom: 20px;
+
   transition: color 0.3s ease;
 }
 
