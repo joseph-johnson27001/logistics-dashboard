@@ -101,11 +101,11 @@ export default {
     VehichleOverviewTable,
     OrdersByCountry,
     DeliveryPerformance,
-    MobileNav, // Register the MobileNav component
+    MobileNav,
   },
   data() {
     return {
-      isMobileNavVisible: false, // State to control the visibility of the mobile nav
+      isMobileNavVisible: false,
       kpis: [
         {
           title: "On Route Vehicles",
@@ -146,7 +146,6 @@ export default {
   },
   methods: {
     toggleMobileNav() {
-      // Toggles the visibility of the MobileNav component
       this.isMobileNavVisible = !this.isMobileNavVisible;
     },
   },
@@ -222,6 +221,9 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .kpi-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .bottom-container,
   .second-container {
     grid-template-columns: 1fr;

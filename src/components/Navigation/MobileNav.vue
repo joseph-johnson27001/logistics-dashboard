@@ -3,16 +3,16 @@
     <div v-if="isVisible" class="mobile-nav">
       <div class="close-btn" @click="closeMenu">&times;</div>
       <ul>
-        <li @click="navigateTo()">Home</li>
-        <li @click="navigateTo()">Dashboard</li>
-        <li @click="navigateTo()">Shipments</li>
-        <li @click="navigateTo()">Fleet</li>
-        <li @click="navigateTo()">Inventory</li>
-        <li @click="navigateTo()">Reports</li>
-        <li @click="navigateTo()">Analytics</li>
-        <li @click="navigateTo()">Support</li>
-        <li @click="navigateTo()">Settings</li>
-        <li @click="navigateTo()">Logout</li>
+        <li><i class="fas fa-home"></i> Home</li>
+        <li><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+        <li><i class="fas fa-shipping-fast"></i> Shipments</li>
+        <li><i class="fas fa-truck"></i> Fleet</li>
+        <li><i class="fas fa-cogs"></i> Inventory</li>
+        <li><i class="fas fa-chart-line"></i> Reports</li>
+        <li><i class="fas fa-chart-pie"></i> Analytics</li>
+        <li><i class="fas fa-life-ring"></i> Support</li>
+        <li><i class="fas fa-cogs"></i> Settings</li>
+        <li><i class="fas fa-sign-out-alt"></i> Logout</li>
       </ul>
     </div>
   </transition>
@@ -46,9 +46,6 @@ export default {
     closeMenu() {
       this.isVisible = false;
     },
-    navigateTo() {
-      this.closeMenu();
-    },
   },
 };
 </script>
@@ -60,12 +57,14 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   z-index: 1000;
+  padding-top: 50px;
+  transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+  text-align: center;
 }
 
 .close-btn {
@@ -73,27 +72,35 @@ export default {
   top: 15px;
   right: 20px;
   font-size: 2rem;
+  color: #fff;
   cursor: pointer;
 }
 
 ul {
   list-style: none;
   padding: 0;
+  width: 100%;
 }
 
 li {
-  padding: 15px;
-  font-size: 1.2rem;
+  padding: 15px 20px;
+  font-size: 1.1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   width: 100%;
   justify-content: flex-start;
+  color: #fff;
+  transition: background-color 0.3s ease;
 }
 
 li:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+li i {
+  font-size: 1.3rem;
 }
 
 .fas {

@@ -161,7 +161,8 @@ export default {
 }
 
 @media (max-width: 699px) {
-  .sidebar {
+  .sidebar,
+  .sidebar.collapsed {
     display: none;
   }
 }
