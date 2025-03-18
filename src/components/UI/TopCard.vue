@@ -3,6 +3,7 @@
     <!-- Left Section (Search) -->
     <div class="search-area">
       <i class="fas fa-search"></i>
+      <i class="fas fa-bars"></i>
       <input type="text" placeholder="Search..." />
     </div>
 
@@ -113,12 +114,21 @@ export default {
   border: 2px solid white;
 }
 
-@media (max-width: 500px) {
+.fa-bars {
+  display: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+@media (max-width: 699px) {
   input {
     display: none;
   }
   .fa-search {
-    cursor: pointer;
+    display: none;
+  }
+  .fa-bars {
+    display: block;
   }
 }
 </style>

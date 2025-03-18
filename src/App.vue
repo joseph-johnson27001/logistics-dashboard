@@ -19,7 +19,7 @@
         </div>
         <div class="second-container">
           <GraphCard
-            :graphTitle="'Orders Statistics'"
+            :graphTitle="'Orders'"
             :total="totalOrders"
             totalType="Orders"
           >
@@ -29,9 +29,9 @@
           </GraphCard>
 
           <GraphCard
-            :graphTitle="'Shipment Statistics'"
+            :graphTitle="'Shipments'"
             :total="totalDeliveries"
-            totalType="Deliveries"
+            totalType="Shipments"
           >
             <template #graph>
               <ShipmentsGraph />
