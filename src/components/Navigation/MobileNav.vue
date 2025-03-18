@@ -63,7 +63,7 @@ export default {
   justify-content: flex-start;
   z-index: 1000;
   padding-top: 50px;
-  transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+  transition: opacity 0.1s ease;
   text-align: center;
 }
 
@@ -97,10 +97,6 @@ li {
 
 li:hover {
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-li i {
-  font-size: 1.3rem;
 }
 
 .fas {
