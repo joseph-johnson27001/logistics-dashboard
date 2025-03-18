@@ -56,9 +56,7 @@
             subtitle="62 deliveries in progress"
           >
             <div class="orders-by-countries-details">
-              <p>
-                Details about orders being processed in different countries.
-              </p>
+              <OrdersByCountry />
             </div>
           </StatisticsCard>
         </div>
@@ -76,6 +74,7 @@ import ShipmentsGraph from "./components/Graphs/ShipmentsGraph.vue";
 import OrdersGraph from "./components/Graphs/OrdersGraph.vue";
 import StatisticsCard from "./components/UI/StatisticsCard.vue";
 import VehichleOverviewTable from "./components/Tables/VehichlesOverview.vue";
+import OrdersByCountry from "./components/Tables/OrdersByCountry.vue";
 
 export default {
   name: "App",
@@ -88,6 +87,7 @@ export default {
     OrdersGraph,
     StatisticsCard,
     VehichleOverviewTable,
+    OrdersByCountry,
   },
   data() {
     return {
@@ -183,6 +183,10 @@ body {
 }
 
 .vehichles-details {
+  width: 100%;
+}
+
+.orders-by-countries-details {
   width: 100%;
 }
 

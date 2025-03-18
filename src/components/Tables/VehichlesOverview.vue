@@ -60,12 +60,6 @@ export default {
 </script>
 
 <style scoped>
-.vehichle-overview-table {
-  font-family: "Assistant";
-  font-weight: 400;
-  width: 100%;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -77,10 +71,10 @@ td {
 
 td.icon-text {
   display: flex;
+  color: rgba(47, 43, 61, 0.9);
   align-items: center;
   gap: 10px;
   font-size: 16px;
-  font-weight: 500;
 }
 
 .icon-container {
@@ -90,6 +84,11 @@ td.icon-text {
   width: 24px;
 }
 
+td.time {
+  color: rgba(47, 43, 61, 0.9);
+  font-weight: 500;
+}
+
 td.time,
 td.percentage {
   text-align: right;
@@ -97,12 +96,7 @@ td.percentage {
 }
 
 tr {
-  color: rgba(47, 43, 61, 0.9);
   font-size: 16px;
-}
-
-tr .time {
-  font-weight: 600;
 }
 
 tr .percentage {
