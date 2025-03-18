@@ -45,8 +45,18 @@
             subtitle="12% increase this month"
           >
             <div class="performance-details">
-              <p>Delivery statistics and performance metrics can go here.</p>
+              <!-- <DeliveryPerformanceTable /> -->
             </div>
+          </StatisticsCard>
+          <!-- Vehichle Overview Card -->
+          <StatisticsCard
+            title="Vehichle Overview"
+            subtitle="232 Currently Active Vehichles"
+          >
+            <div class="vehichles-details">
+              <VehichleOverviewTable />
+            </div>
+            <!-- PUT IT HERE -->
           </StatisticsCard>
 
           <!-- Orders By Countries Card -->
@@ -73,7 +83,8 @@ import KpiCard from "./components/UI/KpiCard.vue";
 import GraphCard from "./components/UI/GraphCard.vue";
 import ShipmentsGraph from "./components/Graphs/ShipmentsGraph.vue";
 import OrdersGraph from "./components/Graphs/OrdersGraph.vue";
-import StatisticsCard from "./components/UI/StatisticsCard.vue"; // Import the StatisticsCard
+import StatisticsCard from "./components/UI/StatisticsCard.vue";
+import VehichleOverviewTable from "./components/Tables/VehichlesOverview.vue";
 
 export default {
   name: "App",
@@ -84,7 +95,8 @@ export default {
     GraphCard,
     ShipmentsGraph,
     OrdersGraph,
-    StatisticsCard, // Register the StatisticsCard component
+    StatisticsCard,
+    VehichleOverviewTable,
   },
   data() {
     return {
@@ -122,8 +134,8 @@ export default {
           backgroundColorDark: "#10b981",
         },
       ],
-      totalOrders: 230, // Example data for total orders
-      totalDeliveries: 153, // Example data for total deliveries
+      totalOrders: 230,
+      totalDeliveries: 153,
     };
   },
 };
@@ -174,9 +186,19 @@ body {
 
 .bottom-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 20px;
   gap: 20px;
+}
+
+.vehichles-details {
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .bottom-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 1024px) {
