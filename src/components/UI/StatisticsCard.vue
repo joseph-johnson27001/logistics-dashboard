@@ -51,6 +51,7 @@ export default defineComponent({
 
 .subtitle {
   margin-top: 2px;
+  margin-bottom: 5px;
   font-size: 13px;
   color: rgba(47, 43, 61, 0.55);
 }

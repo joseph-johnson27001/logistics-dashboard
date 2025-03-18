@@ -107,7 +107,7 @@ tr:hover {
 tr .percentage {
   font-weight: 600;
   color: rgba(47, 43, 61, 0.7);
-  color: #0b508b;
+  color: #5a67d8;
 }
 
 table tr:not(.no-border-bottom) {
