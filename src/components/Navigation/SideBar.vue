@@ -70,6 +70,7 @@ export default {
   justify-content: space-between;
   transition: width 0.3s ease;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .sidebar.collapsed {
