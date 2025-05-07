@@ -72,6 +72,7 @@
         </div>
       </div>
     </div>
+    <DashboardButton />
   </div>
 </template>
 
@@ -87,6 +88,7 @@ import StatisticsCard from "./components/UI/StatisticsCard.vue";
 import VehichleOverviewTable from "./components/Tables/VehichlesOverview.vue";
 import OrdersByCountry from "./components/Tables/OrdersByCountry.vue";
 import DeliveryPerformance from "./components/Tables/DeliveryPerformance.vue";
+import DashboardButton from "./components/UI/DashboardButton.vue";
 
 export default {
   name: "App",
@@ -102,6 +104,7 @@ export default {
     OrdersByCountry,
     DeliveryPerformance,
     MobileNav,
+    DashboardButton,
   },
   data() {
     return {
